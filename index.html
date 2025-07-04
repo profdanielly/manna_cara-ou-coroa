@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cara ou Coroa</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #56ccf2, #2f80ed);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      color: #fff;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    #resultado {
+      font-size: 2.5rem;
+      margin: 20px;
+      padding: 20px 40px;
+      background-color: rgba(255, 255, 255, 0.2);
+      border-radius: 20px;
+      transition: all 0.3s ease;
+    }
+
+    button {
+      padding: 15px 30px;
+      font-size: 1.5rem;
+      border: none;
+      border-radius: 15px;
+      background-color: #fff;
+      color: #2f80ed;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: #f2f2f2;
+    }
+  </style>
+</head>
+<body>
+  <h1>Cara ou Coroa</h1>
+  <div id="resultado">Clique para jogar!</div>
+  <button onclick="jogar()">Jogar</button>
+
+  <script>
+    function jogar() {
+      const resultado = Math.random() < 0.5 ? "Cara 🪙" : "Coroa 🪙";
+      document.getElementById("resultado").textContent = resultado;
+    }
+  </script>
+</body>
+</html>
